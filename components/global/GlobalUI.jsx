@@ -11,7 +11,7 @@ import ChatWidget from './ChatWidget';
 function ToastViewport() {
   const { toasts } = useStore();
   return <div className="fixed bottom-5 left-1/2 z-[99] flex w-max max-w-[92vw] -translate-x-1/2 flex-col gap-2 md:left-8 md:translate-x-0" aria-live="polite">
-    {toasts.map((item) => <div key={item.id} className="toast-in flex max-w-[92vw] items-center gap-2 rounded-2xl bg-vaisa-black px-5 py-3.5 text-[13px] font-bold text-white shadow-lux"><span className="h-2 w-2 shrink-0 rounded-full bg-vaisa-gold" /><span>{item.message}</span></div>)}
+    {toasts.map((item) => <div key={item.id} className="toast-in flex max-w-[92vw] items-center gap-2 rounded-2xl bg-vaisa-black px-5 py-3.5 text-[13px] font-bold text-white shadow-lux"><span className="h-2 w-2 shrink-0 rounded-full bg-vaisa-gold" /><span className="min-w-0 break-words">{item.message}</span></div>)}
   </div>;
 }
 

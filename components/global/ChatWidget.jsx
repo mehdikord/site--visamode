@@ -37,7 +37,7 @@ export default function ChatWidget() {
 
   return (
     <>
-      <button onClick={toggle} className="group fixed bottom-5 right-5 z-[70] flex h-[60px] w-[60px] items-center justify-center rounded-full bg-vaisa-black text-2xl text-white shadow-lux transition hover:bg-vaisa-golddark" aria-label="گفتگو با استایلیست">
+      <button onClick={toggle} className="group fixed bottom-5 right-5 z-[70] flex h-[52px] w-[52px] items-center justify-center rounded-full bg-vaisa-black text-xl text-white shadow-lux transition hover:bg-vaisa-golddark sm:h-[60px] sm:w-[60px] sm:text-2xl" aria-label="گفتگو با استایلیست">
         💬<span className="absolute -left-1 -top-1 h-5 w-5 animate-pulse rounded-full border-2 border-vaisa-cream bg-emerald-500" /><span className="pointer-events-none absolute left-[70px] whitespace-nowrap rounded-xl bg-black px-3 py-2 text-[12px] font-bold text-white opacity-0 transition group-hover:opacity-100">استایلیست آنلاین 🤍</span>
       </button>
       {open && <div className="fixed bottom-[85px] right-5 z-[70] w-[330px] max-w-[calc(100vw-40px)] overflow-hidden rounded-[22px] border border-black/10 bg-white shadow-lux">
@@ -52,7 +52,7 @@ export default function ChatWidget() {
             <div className={`max-w-[85%] rounded-2xl px-3.5 py-2.5 text-[13px] leading-6 ${message.who === 'bot' ? 'rounded-tr-sm border border-black/5 bg-white shadow-sm' : 'rounded-tl-sm bg-vaisa-black text-white'}`}>{message.text}</div>
           </div>)}<div ref={endRef} />
         </div>
-        <form onSubmit={send} className="flex gap-2 border-t border-black/5 p-3"><input value={value} onChange={(event) => setValue(event.target.value)} placeholder="سوال استایلت رو بپرس..." className="flex-1 rounded-xl bg-vaisa-cream px-4 py-3 text-[13px] outline-none focus:ring-2 focus:ring-vaisa-gold/40" /><button className="h-12 w-12 shrink-0 rounded-xl bg-vaisa-black text-white transition hover:bg-vaisa-gold" aria-label="ارسال پیام">←</button></form>
+        <form onSubmit={send} className="flex gap-2 border-t border-black/5 p-3"><input value={value} onChange={(event) => setValue(event.target.value)} placeholder="سوال استایلت رو بپرس..." className="min-w-0 flex-1 rounded-xl bg-vaisa-cream px-4 py-3 text-[13px] outline-none focus:ring-2 focus:ring-vaisa-gold/40" /><button className="h-12 w-12 shrink-0 rounded-xl bg-vaisa-black text-white transition hover:bg-vaisa-gold" aria-label="ارسال پیام">←</button></form>
       </div>}
     </>
   );

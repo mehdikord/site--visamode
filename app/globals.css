@@ -100,6 +100,7 @@ body{background:#FAF7F2;color:#151517;overflow-x:hidden}
 .product-card:hover .second-img{opacity:1}
 .product-card .actions{opacity:0;transform:translateY(12px);transition:all .4s ease}
 .product-card:hover .actions{opacity:1;transform:translateY(0)}
+@media(hover:none){.product-card .actions{opacity:1;transform:translateY(0)}}
 .shimmer{position:relative;overflow:hidden}
 .shimmer::after{content:'';position:absolute;top:0;left:-80%;width:60%;height:100%;background:linear-gradient(100deg,transparent,rgba(255,255,255,.5),transparent);transform:skewX(-20deg);animation:shim 2.8s infinite}
 @keyframes shim{0%{left:-80%}60%,100%{left:130%}}
